@@ -167,6 +167,69 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "emp add and get",
+			"item": [
+				{
+					"name": "Get All Meeting records",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/employee/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"employee",
+								""
+							]
+						},
+						"description": "This API provides access to all news data in the database through endpoints that allow users to retrieve news articles or filter results based on certain criteria. It returns data in JSON or XML format and has documentation that explains how to use it."
+					},
+					"response": []
+				},
+				{
+					"name": "Add Meeting record",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjNlZmI3NDI4ZDhhN2RmZWQ0YjI5NjgwIn0sImlhdCI6MTY3NjY1NDQwMiwiZXhwIjoxNjc3MDE0NDAyfQ.DaQwMHCiTRPKci6xadjzWVg_tidLkorjkm9tP7lOhds",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Kalana Rathnayake\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/employee/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"employee",
+								"add"
+							]
+						},
+						"description": "This API provides access to insert new news into the news board. Used by admin to enter new news articles to the news board."
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
